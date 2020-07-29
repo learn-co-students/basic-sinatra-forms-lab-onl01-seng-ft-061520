@@ -5,8 +5,24 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
+ <%@team_info.each do |k, v|%>
+ <%case k 
+  when 'name'%>
+  <h1>Team Name: <%= v%></h1>
+ <%when 'coach'%>
+ <h2>Coach: <%= v%></h2>
+ <%when 'pg'%>
+ <h2>Point Guard: <%= v%></h2>
+ <%when 'sg'%>
+ <h2>Shooting Guard: <%= v%></h2>
+ <%when 'pf'%>
+ <h2>Power Forward: <%= v%></h2>
+ <%when 'sf'%>
+ <h2>Small Forward: <%= v%></h2>
+ <%when 'c'%>
+ <h2>Center: <%= v%></h2>
+ <%end%>
+<%end%>
 
  </body>
 </html>
